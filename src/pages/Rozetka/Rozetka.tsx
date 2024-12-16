@@ -1,9 +1,11 @@
 import React from 'react'
+import { RozetkaCategoryViewer } from './components/RozetkaCategoryViewer/RozetkaCategoryViewer'
+import { changeCategories, getCategories } from '../../http/rozetkaApi'
 
 export const Rozetka = () => {
   return (
     <>
-    {/* <CategoryViewer viewer={{title: "Rozetka"}} fetchFunction={getCategories} saveFunction={changeCategories}></CategoryViewer> */}
+    <RozetkaCategoryViewer fetchFunction={getCategories} saveFunction={changeCategories}></RozetkaCategoryViewer>
     </>
   )
 }
