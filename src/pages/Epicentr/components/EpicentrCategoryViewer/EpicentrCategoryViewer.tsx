@@ -21,7 +21,7 @@ export const EpicentrCategoryViewer = ({fetchFunction, saveFunction}: IProps) =>
 
   useEffect(() => {
     fetchCategories()
-  }, [fetchFunction])
+  }, [fetchFunction, fetchCategories])
 
   const handleItemChange = (categoryItem: IEpicentrCategoryItem) => {
     setCategories(categories.map((category) => {
