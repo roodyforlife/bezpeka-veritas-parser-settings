@@ -13,15 +13,17 @@ interface IProps {
 export const EpicentrCategoryViewer = ({fetchFunction, saveFunction}: IProps) => {
     const [categories, setCategories] = useState<IEpicentrCategoryItem[]>([])
     const [loading, setLaoding] = useState<boolean>(false);
-
-  const fetchCategories = async () => {
-    setLaoding(true);
-    await fetchFunction().then((data) => setCategories(data)).finally(() => setLaoding(false))
-  }
-
+    
   useEffect(() => {
-    fetchCategories()
-  }, [fetchFunction, fetchCategories])
+    const fetchCategories = async () => {
+      setLaoding(true);
+      await fetchFunction()
+        .then((data) => setCategories(data))
+        .finally(() => setLaoding(false));
+    };
+  
+    fetchCategories();
+  }, [fetchFunction])
 
   const handleItemChange = (categoryItem: IEpicentrCategoryItem) => {
     setCategories(categories.map((category) => {
