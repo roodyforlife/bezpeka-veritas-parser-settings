@@ -2,7 +2,6 @@ import React from 'react'
 import { IEpicentrCategoryItem } from '../../../../interfaces/Epicentr/IEpicentrCategoryItem';
 import { CustomInput } from '../../../../components/UI/CustomInput/CustomInput';
 import cl from './EpicentrCategoryItem.module.css'
-import { FormSelect } from 'react-bootstrap';
 
 interface IProps {
     categoryItem: IEpicentrCategoryItem

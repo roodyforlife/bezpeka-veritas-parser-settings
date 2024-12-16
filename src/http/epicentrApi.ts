@@ -9,5 +9,5 @@ export const getCategories = async (): Promise<IEpicentrCategoryItem[]> => {
 }
 
 export const changeCategories = async (categories: IEpicentrCategoryItem[]) => {
-     const { data } = await $host.post('epicentr/categories', categories)
+     await $host.post('epicentr/categories', categories)
 }

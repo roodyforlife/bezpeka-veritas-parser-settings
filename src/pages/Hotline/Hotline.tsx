@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { changeCategories, getCategories } from '../../http/hotlineApi'
+import React from 'react'
 
 export const Hotline = () => {
   return (

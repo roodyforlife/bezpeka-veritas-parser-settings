@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { changeCategories, getCategories } from '../../http/rozetkaApi'
+import React from 'react'
 
 export const Rozetka = () => {
   return (
