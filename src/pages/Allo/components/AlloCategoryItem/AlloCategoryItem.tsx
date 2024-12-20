@@ -18,9 +18,9 @@ export const AlloCategoryItem = ({categoryItem, handleItemChange}: IProps) => {
         <div className={cl.block}>
             <CustomInput value={categoryItem.name} disabled={true}></CustomInput>
         </div>
-        <div className={cl.block}>
+        {/* <div className={cl.block}>
             <CustomInput value={categoryItem.secondId || ""} onChange={(val) => handleItemChange({...categoryItem, secondId: val})}></CustomInput>
-        </div>
+        </div> */}
         <div className={cl.block}>
             <CustomInput value={categoryItem.secondName || ""} onChange={(val) => handleItemChange({...categoryItem, secondName: val})}></CustomInput>
         </div>
