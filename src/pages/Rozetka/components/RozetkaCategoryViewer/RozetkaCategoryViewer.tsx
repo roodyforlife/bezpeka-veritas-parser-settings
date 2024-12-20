@@ -45,7 +45,7 @@ export const RozetkaCategoryViewer = ({fetchFunction, saveFunction}: IProps) => 
    <Loader loading={loading}></Loader>
     <div >
     <div className={cl.title}>Rozetka</div>
-    <Button onClick={handleSave}>Save changes</Button>
+    <div className={cl.stickyButton}><Button onClick={handleSave}>Save changes</Button></div>
     <div className={cl.items}>
       <div className={cl.header}>
         <div>Checked</div>

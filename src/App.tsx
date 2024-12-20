@@ -7,6 +7,7 @@ import { Epicentr } from './pages/Epicentr/Epicentr';
 import { Rozetka } from './pages/Rozetka/Rozetka';
 import { Hotline } from './pages/Hotline/Hotline';
 import { WordParser } from './pages/WordParser/WordParser';
+import { Allo } from './pages/Allo/Allo';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/settings/epicentr" element={<Epicentr />}></Route>
         <Route path="/settings/hotline" element={<Hotline />}></Route>
         <Route path="/settings/rozetka" element={<Rozetka />}></Route>
+        <Route path="/settings/allo" element={<Allo />}></Route>
         <Route path="/word-parser" element={<WordParser />}></Route>
         <Route path="/" element={<MainPage />}></Route>
       </Routes>

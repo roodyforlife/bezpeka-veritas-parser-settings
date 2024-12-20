@@ -24,3 +24,8 @@
     margin-bottom: 20px;
     text-transform: uppercase;
 }
+
+.stickyButton {
+    position: sticky;
+    top: 60px;
+}

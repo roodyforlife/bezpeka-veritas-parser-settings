@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import { IEpicentrCategoryItem } from '../../../../interfaces/Epicentr/IEpicentrCategoryItem'
 import { Loader } from '../../../../components/Loader/Loader'
 import { Button } from '../../../../components/UI/Button/Button'
-import { EpicentrCategoryItem } from '../EpicentrCategoryItem/EpicentrCategoryItem'
-import cl from './EpicentrCategoryViewer.module.css'
+import cl from './AlloCategoryViewer.module.css';
+import { AlloCategoryItem } from '../AlloCategoryItem/AlloCategoryItem';
+import { IAlloCategoryItem } from '../../../../interfaces/Allo/IAlloCategoryItem';
 
 interface IProps {
-    fetchFunction: () => Promise<IEpicentrCategoryItem[]>
-    saveFunction: (categories: IEpicentrCategoryItem[]) => Promise<void>
+    fetchFunction: () => Promise<IAlloCategoryItem[]>
+    saveFunction: (categories: IAlloCategoryItem[]) => Promise<void>
 }
 
-export const EpicentrCategoryViewer = ({fetchFunction, saveFunction}: IProps) => {
-    const [categories, setCategories] = useState<IEpicentrCategoryItem[]>([])
+export const AlloCategoryViewer = ({fetchFunction, saveFunction}: IProps) => {
+    const [categories, setCategories] = useState<IAlloCategoryItem[]>([])
     const [loading, setLaoding] = useState<boolean>(false);
     
   useEffect(() => {
@@ -25,7 +25,7 @@ export const EpicentrCategoryViewer = ({fetchFunction, saveFunction}: IProps) =>
     fetchCategories();
   }, [fetchFunction])
 
-  const handleItemChange = (categoryItem: IEpicentrCategoryItem) => {
+  const handleItemChange = (categoryItem: IAlloCategoryItem) => {
     setCategories(categories.map((category) => {
       if (category.id === categoryItem.id) {
         return categoryItem
@@ -44,18 +44,17 @@ export const EpicentrCategoryViewer = ({fetchFunction, saveFunction}: IProps) =>
    <>
    <Loader loading={loading}></Loader>
     <div >
-    <div className={cl.title}>Epicentr</div>
+    <div className={cl.title}>Allo</div>
     <div className={cl.stickyButton}><Button onClick={handleSave}>Save changes</Button></div>
     <div className={cl.items}>
       <div className={cl.header}>
         <div>Checked</div>
         <div>Prom name</div>
-        <div>Category id</div>
         <div>Marketpalce name</div>
         <div>Percent</div>
       </div>
       {categories.map((categoryItem) => 
-        <EpicentrCategoryItem categoryItem={categoryItem} handleItemChange={handleItemChange}></EpicentrCategoryItem>
+        <AlloCategoryItem categoryItem={categoryItem} handleItemChange={handleItemChange}></AlloCategoryItem>
       )}
     </div>
 </div>
