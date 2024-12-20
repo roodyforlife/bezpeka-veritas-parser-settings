@@ -50,6 +50,7 @@ export const AlloCategoryViewer = ({fetchFunction, saveFunction}: IProps) => {
       <div className={cl.header}>
         <div>Checked</div>
         <div>Prom name</div>
+        <div>Category id</div>
         <div>Marketpalce name</div>
         <div>Percent</div>
       </div>

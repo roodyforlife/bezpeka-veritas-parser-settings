@@ -5,4 +5,5 @@ export interface IAlloCategoryItem {
     secondName?: string,
     percent: string,
     checked: boolean,
+    secondId: string,
 }
