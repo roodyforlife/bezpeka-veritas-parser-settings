@@ -14,7 +14,7 @@ export const Navbar = ({ children }: IProps) => {
                     <NavLink to="/settings/epicentr"><nav>Epicentr settings</nav></NavLink>
                     <NavLink to="/settings/rozetka"><nav>Rozetka settings</nav></NavLink>
                     <NavLink to="/settings/allo"><nav>Allo settings</nav></NavLink>
-                    {/* <NavLink to="/settings/hotline"><nav>Hotline settings</nav></NavLink> */}
+                    <NavLink to="/settings/hotline"><nav>Hotline settings</nav></NavLink>
                     <NavLink to="/tel-bot"><nav>Telegram bot</nav></NavLink>
                     <NavLink to="/word-parser"><nav>Word parser</nav></NavLink>
                 </div>
